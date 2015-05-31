@@ -11,10 +11,6 @@
         "direction":"input",
         "loc":"rxe_n"
       },
-      "i_ftdi_suspend_n":{
-        "direction":"input",
-        "loc":"suspend_n"
-      },
       "i_ftdi_txe_n":{
         "direction":"input",
         "loc":"txe_n"
