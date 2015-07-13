@@ -1,0 +1,20 @@
+{
+  "BASE_DIR":"~/projects/ibuilder_project",
+  "board":"dionysus",
+  "PROJECT_NAME":"example_project",
+  "SLAVES":{
+    "gpio1":{
+      "filename":"wb_gpio.v",
+      "bind":{
+        "gpio_out[1:0]":{
+          "loc":"led[1:0]",
+          "direction":"output"
+        },
+        "gpio_in[3:2]":{
+          "loc":"button[1:0]",
+          "direction":"input"
+        }
+      }
+    }
+  }
+}
