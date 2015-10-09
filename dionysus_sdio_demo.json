@@ -1,0 +1,58 @@
+{
+  "BASE_DIR": "~/projects/ibuilder_project",
+  "board":"dionysus",
+  "PROJECT_NAME":"example_project",
+  "TEMPLATE":"wishbone_template.json",
+  "SLAVES":{
+    "gpio1":{
+      "filename":"wb_gpio.v",
+      "bind":{
+        "gpio_out[1:0]":{
+          "loc":"led[1:0]",
+          "direction":"output"
+        },
+        "gpio_in[1:0]":{
+          "loc":"button[1:0]",
+          "direction":"input"
+        }
+      }
+    },
+    "sdcard":{
+      "filename":"wb_sdio_device.v",
+      "bind":{
+        "i_phy_sd_clk":{
+          "loc":"sd_clk",
+          "direction":"input"
+        },
+        "io_phy_sd_cmd":{
+          "loc":"sd_cmd",
+          "direction":"inout"
+        },
+        "io_phy_sd_data":{
+          "loc":"sd_data[3:0]",
+          "direction":"inout"
+        }
+      }
+    }
+  },
+  "dependencies":[
+    "sdio_fbr.v",
+    "sd_dev_platform_spartan6.v",
+    "crc16.v",
+    "sdio_cis_rom.rom"
+  ],
+  "bind": {
+      "clk": {
+          "direction": "input",
+          "loc": "clk"
+      },
+      "rst": {
+          "direction": "input",
+          "loc": "rst"
+      }
+
+  },
+  "constraint_files":[
+    "sdio_constraints.ucf"
+  ]
+}
