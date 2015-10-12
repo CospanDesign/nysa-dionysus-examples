@@ -1,5 +1,5 @@
 {
-  "BASE_DIR":"/home/cospan/Projects/nysa_base/user_ibuilder_projects",
+  "BASE_DIR":"~/projects/ibuilder_project",
   "IMAGE_ID":256,
   "INTERFACE":{
     "bind":{
