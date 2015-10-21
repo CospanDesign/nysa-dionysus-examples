@@ -33,44 +33,26 @@
           "direction":"inout"
         }
       }
-    },
-    "sdio":{
-      "filename":"wb_sdio_device.v",
-      "bind":{
-        "i_phy_sd_clk":{
-          "loc":"sd_clk",
-          "direction":"input"
-        },
-        "io_phy_sd_cmd":{
-          "loc":"sd_cmd",
-          "direction":"inout"
-        },
-        "io_phy_sd_data":{
-          "loc":"sd_data[3:0]",
-          "direction":"inout"
-        }
-      }
     }
   },
   "dependencies":[
     "sd_sd4_phy.v",
-    "sdio_fbr.v",
-    "sd_dev_platform_spartan6.v",
-    "crc16_2bit.v",
-    "sdio_cis_rom.rom"
+    "sd_host_stack_defines.v",
+    "sd_host_platform_spartan6.v",
+    "crc16_2bit.v"
   ],
   "bind": {
-      "clk": {
-          "direction": "input",
-          "loc": "clk"
-      },
-      "rst": {
-          "direction": "input",
-          "loc": "rst"
-      }
-
+    "clk": {
+      "direction": "input",
+      "loc": "clk"
+    },
+    "rst": {
+      "direction": "input",
+      "loc": "rst"
+    }
   },
   "constraint_files":[
-    "dionysus_sdio.ucf"
+    "dionysus_bare.ucf",
+    "dionysus_sd_host.ucf"
   ]
 }
